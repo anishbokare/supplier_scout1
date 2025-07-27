@@ -86,7 +86,7 @@ export default function LoginPage() {
       </div>
       <div className="hidden bg-muted lg:block relative">
         <Image
-            src="https://placehold.co/1080x1920.png"
+            src="https://wallpaperaccess.com/full/2338249.jpg"
             alt="Image"
             width="1080"
             height="1920"
