@@ -5,14 +5,14 @@ import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 const categories = [
-  { name: "Vegetables", image: "@/vendor/dashboard/vegetable.jpeg", hint: "fresh vegetables" },
-  { name: "Spices & Masalas", image: "@/vendor/dashboard/spices.jpeg", hint: "assorted spices" },
-  { name: "Grains & Flour", image: "@/vendor/dashboard/grains_and_flour.jpeg", hint: "sacks of grain" },
-  { name: "Oils & Ghee", image: "@/vendor/dashboard/oil.jpeg", hint: "cooking oil bottles" },
-  { name: "Dairy & Paneer", image: "@/vendor/dashboard/paneer.jpeg", hint: "cheese blocks" },
-  { name: "Snacks & Pellets", image: "@/vendor/dashboard/snacks.jpeg", hint: "puri pellets" },
-  { name: "Chutneys & Sauces", image: "@/vendor/dashboard/chutney.jpeg", hint: "chutney bowls" },
-  { name: "Disposables", image: "@/vendor/dashboard/disposables.jpeg", hint: "paper plates cups" },
+  { name: "Vegetables", image: "./vendor/dashboard/vegetable.jpeg", hint: "fresh vegetables" },
+  { name: "Spices & Masalas", image: "./vendor/dashboard/spices.jpeg", hint: "assorted spices" },
+  { name: "Grains & Flour", image: "./vendor/dashboard/grains_and_flour.jpeg", hint: "sacks of grain" },
+  { name: "Oils & Ghee", image: "./vendor/dashboard/oil.jpeg", hint: "cooking oil bottles" },
+  { name: "Dairy & Paneer", image: "./vendor/dashboard/paneer.jpeg", hint: "cheese blocks" },
+  { name: "Snacks & Pellets", image: "./vendor/dashboard/snacks.jpeg", hint: "puri pellets" },
+  { name: "Chutneys & Sauces", image: "./vendor/dashboard/chutney.jpeg", hint: "chutney bowls" },
+  { name: "Disposables", image: "./vendor/dashboard/disposables.jpeg", hint: "paper plates cups" },
 ];
 
 export default function VendorDashboardPage() {
