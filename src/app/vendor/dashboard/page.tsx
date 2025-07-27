@@ -1,18 +1,29 @@
+
 import Link from "next/link"
-import Image from "next/image"
+import Image, { type StaticImageData } from "next/image"
 import { Search } from "lucide-react"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 
-const categories = [
-  { name: "Vegetables", image: "https://github.com/anishbokare/supplier_scout1/blob/main/src/app/vendor/dashboard/vegetable.jpeg", hint: "fresh vegetables" },
-  { name: "Spices & Masalas", image: "https://github.com/anishbokare/supplier_scout1/blob/main/src/app/vendor/dashboard/spices.jpeg", hint: "assorted spices" },
-  { name: "Grains & Flour", image: "https://github.com/anishbokare/supplier_scout1/blob/main/src/app/vendor/dashboard/grains_and_flour.jpeg", hint: "sacks of grain" },
-  { name: "Oils & Ghee", image: "https://github.com/anishbokare/supplier_scout1/blob/main/src/app/vendor/dashboard/oil.jpeg", hint: "cooking oil bottles" },
-  { name: "Dairy & Paneer", image: "https://github.com/anishbokare/supplier_scout1/blob/main/src/app/vendor/dashboard/paneer.jpeg", hint: "cheese blocks" },
-  { name: "Snacks & Pellets", image: "https://github.com/anishbokare/supplier_scout1/blob/main/src/app/vendor/dashboard/snacks.jpeg", hint: "puri pellets" },
-  { name: "Chutneys & Sauces", image: "https://github.com/anishbokare/supplier_scout1/blob/main/src/app/vendor/dashboard/chhutney.jpeg", hint: "chutney bowls" },
-  { name: "Disposables", image: "https://github.com/anishbokare/supplier_scout1/blob/main/src/app/vendor/dashboard/Disposables.jpeg", hint: "paper plates cups" },
+import vegetableImg from "@/assets/images/vegetable.jpeg";
+import spicesImg from "@/assets/images/spices.jpeg";
+import grainsImg from "@/assets/images/grains_and_flour.jpeg";
+import oilImg from "@/assets/images/oil.jpeg";
+import paneerImg from "@/assets/images/paneer.jpeg";
+import snacksImg from "@/assets/images/snacks.jpeg";
+import chutneyImg from "@/assets/images/chutney.jpeg";
+import disposablesImg from "@/assets/images/disposables.jpeg";
+
+
+const categories: {name: string, image: StaticImageData, hint: string}[] = [
+  { name: "Vegetables", image: vegetableImg, hint: "fresh vegetables" },
+  { name: "Spices & Masalas", image: spicesImg, hint: "assorted spices" },
+  { name: "Grains & Flour", image: grainsImg, hint: "sacks of grain" },
+  { name: "Oils & Ghee", image: oilImg, hint: "cooking oil bottles" },
+  { name: "Dairy & Paneer", image: paneerImg, hint: "cheese blocks" },
+  { name: "Snacks & Pellets", image: snacksImg, hint: "puri pellets" },
+  { name: "Chutneys & Sauces", image: chutneyImg, hint: "chutney bowls" },
+  { name: "Disposables", image: disposablesImg, hint: "paper plates cups" },
 ];
 
 export default function VendorDashboardPage() {
@@ -48,6 +59,7 @@ export default function VendorDashboardPage() {
                                 width={400}
                                 height={300}
                                 className="object-cover w-full h-48 transition-transform duration-300 ease-in-out group-hover:scale-110"
+                                placeholder="blur"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-4">
                                 <h3 className="text-lg font-semibold text-white">{category.name}</h3>
