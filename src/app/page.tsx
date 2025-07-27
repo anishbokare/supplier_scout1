@@ -86,7 +86,7 @@ export default function LoginPage() {
       </div>
       <div className="hidden bg-muted lg:block relative">
         <Image
-            src="https://wallpaperaccess.com/full/2338249.jpg"
+            src="https://www.freepik.com/free-photo/little-toy-shopping-trolley_3242558.htm#fromView=search&page=1&position=11&uuid=a8fcc83a-5bd1-41d4-b7c8-18219811f125&query=1080+X+1920+supplier+cart+image"
             alt="Image"
             width="1080"
             height="1920"
