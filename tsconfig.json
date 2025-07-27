@@ -32,3 +32,12 @@
   ],
   "exclude": ["node_modules"]                    // Exclude node_modules from compilation
 }
+    {
+      "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+          "@/*": ["src/*"]
+        }
+      }
+    }
+    
