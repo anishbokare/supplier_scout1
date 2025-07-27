@@ -1,12 +1,13 @@
-import type {NextConfig} from 'next';
+import type { NextConfig } from 'next';
+import path from 'path';
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  reactStrictMode: true,
   typescript: {
-    ignoreBuildErrors: true,
+    ignoreBuildErrors: true, // Ignore TypeScript build errors
   },
   eslint: {
-    ignoreDuringBuilds: true,
+    ignoreDuringBuilds: true, // Ignore ESLint errors during builds
   },
   images: {
     remotePatterns: [
@@ -18,20 +19,13 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  experimental: {
+    appDir: true, // Enable experimental app directory feature
+  },
+  webpack: (config) => {
+    config.resolve.alias['@'] = path.resolve(__dirname, 'src'); // Set up alias for src
+    return config;
+  },
 };
 
 export default nextConfig;
-const path = require('path');
-
-const nextConfig = {
-  reactStrictMode: true,
-  experimental: {
-    appDir: true,
-  },
-  webpack: (config) => {
-    config.resolve.alias['@'] = path.resolve(__dirname, 'src');
-    return config;
-  }
-};
-
-module.exports = nextConfig;
