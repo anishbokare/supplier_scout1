@@ -1,18 +1,16 @@
-import type { Config } from 'tailwindcss';
+import type {Config} from 'tailwindcss';
+const { fontFamily } = require("tailwindcss/defaultTheme")
 
-const config: Config = {
+export default {
   darkMode: ['class'],
   content: [
-    './src//*.{js,ts,jsx,tsx,mdx}', // Looks good
-    './components//*.{js,ts,jsx,tsx}', // Optional, if you use components outside /src
-    './app//*.{js,ts,jsx,tsx,mdx}', // Required for Next.js App Router structure
+    './src/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
       fontFamily: {
-        body: ['Inter', 'sans-serif'],
-        headline: ['Pacifico', 'cursive'],
-        code: ['monospace'],
+        body: ['var(--font-inter)', ...fontFamily.sans],
+        headline: ['var(--font-pacifico)', ...fontFamily.sans],
       },
       colors: {
         background: 'hsl(var(--background))',
@@ -73,12 +71,20 @@ const config: Config = {
       },
       keyframes: {
         'accordion-down': {
-          from: { height: '0' },
-          to: { height: 'var(--radix-accordion-content-height)' },
+          from: {
+            height: '0',
+          },
+          to: {
+            height: 'var(--radix-accordion-content-height)',
+          },
         },
         'accordion-up': {
-          from: { height: 'var(--radix-accordion-content-height)' },
-          to: { height: '0' },
+          from: {
+            height: 'var(--radix-accordion-content-height)',
+          },
+          to: {
+            height: '0',
+          },
         },
       },
       animation: {
@@ -88,6 +94,4 @@ const config: Config = {
     },
   },
   plugins: [require('tailwindcss-animate')],
-};
-
-export default config;
+} satisfies Config;
